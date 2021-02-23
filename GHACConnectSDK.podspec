@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GHACConnectSDK'
-  s.version = '0.0.2'
+  s.version = '0.0.3'
   s.summary          = 'GHACConnectSDK'
 
 # This description is used to generate tags and improve search results.
@@ -25,11 +25,23 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.vendored_frameworks = 'GHACConnectSDK.framework'
   s.frameworks = 'Foundation','UIKit','CoreLocation','Security','CoreTelephony','SystemConfiguration','JavaScriptCore','WebKit'
-  s.pod_target_xcconfig = {
-    'OTHER_LDFLAGS' => '-lObjC',
-    'VALID_ARCHS' => 'x86_64 armv7 arm64'
-
-  }
   s.static_framework = true
+
+  s.dependency 'SDWebImage'
+  s.dependency 'MJExtension', '3.0.13'
+  s.dependency 'AFNetworking/Reachability', '4.0'
+  s.dependency 'AFNetworking/Serialization', '4.0'
+  s.dependency 'AFNetworking/Security', '4.0'
+  s.dependency 'AFNetworking/NSURLSession', '4.0'
+  s.dependency 'Masonry'
+  s.dependency 'KVOController'
+  s.dependency 'FDFullscreenPopGesture'
+  s.dependency 'IQKeyboardManager'
+  s.dependency 'Nimbus/Models'
+  s.dependency 'MJRefresh'
+  s.dependency 'DZNEmptyDataSet'
+  s.dependency 'MMMaterialDesignSpinner'
+  s.dependency 'HondaConnectSDK'
+
 
 end
