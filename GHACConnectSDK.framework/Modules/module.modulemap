@@ -1,6 +1,0 @@
-framework module GHACConnectSDK {
-  umbrella header "GHACConnectSDK-umbrella.h"
-
-  export *
-  module * { export * }
-}
