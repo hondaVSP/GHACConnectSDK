@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GHACConnectSDK'
-  s.version = '0.0.4'
+  s.version = '0.0.5'
   s.summary          = 'GHACConnectSDK'
 
 # This description is used to generate tags and improve search results.
@@ -26,6 +26,11 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'GHACConnectSDK.framework'
   s.frameworks = 'Foundation','UIKit','CoreLocation','Security','CoreTelephony','SystemConfiguration','JavaScriptCore','WebKit'
   s.static_framework = true
+
+  s.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '-lObjC',
+    'VALID_ARCHS' => 'x86_64 armv7 arm64'
+  }
 
   s.dependency 'SDWebImage'
   s.dependency 'MJExtension', '3.0.13'
