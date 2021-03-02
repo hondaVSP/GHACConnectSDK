@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GHACConnectSDK'
-  s.version = '0.0.9'
+  s.version = '0.1.0'
   s.summary          = 'GHACConnectSDK'
 
 # This description is used to generate tags and improve search results.
@@ -27,19 +27,18 @@ Pod::Spec.new do |s|
   # s.frameworks = 'Foundaxtion','UIKit','CoreLocation','Security','CoreTelephony','SystemConfiguration','JavaScriptCore','WebKit'
   s.static_framework = true
   s.resource = 'GHACConnectSDK.bundle'
-
-
+  
   s.pod_target_xcconfig = {
     'OTHER_LDFLAGS' => '-lObjC',
     'VALID_ARCHS' => 'x86_64 armv7 arm64'
   }
 
   s.dependency 'SDWebImage'
-  s.dependency 'MJExtension', '3.0.13'
-  s.dependency 'AFNetworking/Reachability', '4.0'
-  s.dependency 'AFNetworking/Serialization', '4.0'
-  s.dependency 'AFNetworking/Security', '4.0'
-  s.dependency 'AFNetworking/NSURLSession', '4.0'
+  s.dependency 'MJExtension'
+  s.dependency 'AFNetworking/Reachability'
+  s.dependency 'AFNetworking/Serialization'
+  s.dependency 'AFNetworking/Security'
+  s.dependency 'AFNetworking/NSURLSession'
   s.dependency 'Masonry'
   s.dependency 'KVOController'
   s.dependency 'FDFullscreenPopGesture'
@@ -51,7 +50,9 @@ Pod::Spec.new do |s|
   s.dependency 'HondaConnectSDK'
   s.dependency 'Tencent-MapSDK'
   s.dependency 'FMDB'
-  s.dependency 'lottie-ios', '2.5.3'
+  s.dependency 'lottie-ios','2.5.3'
+
+
 
 
 end
