@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GHACConnectSDK'
-  s.version = '0.0.5'
+  s.version = '0.0.9'
   s.summary          = 'GHACConnectSDK'
 
 # This description is used to generate tags and improve search results.
@@ -23,9 +23,11 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
   s.requires_arc = true
-  s.vendored_frameworks = 'GHACConnectSDK.framework'
-  s.frameworks = 'Foundation','UIKit','CoreLocation','Security','CoreTelephony','SystemConfiguration','JavaScriptCore','WebKit'
+  s.vendored_frameworks = 'GHACConnectSDK.framework','TencentLBS.framework'
+  # s.frameworks = 'Foundaxtion','UIKit','CoreLocation','Security','CoreTelephony','SystemConfiguration','JavaScriptCore','WebKit'
   s.static_framework = true
+  s.resource = 'GHACConnectSDK.bundle'
+
 
   s.pod_target_xcconfig = {
     'OTHER_LDFLAGS' => '-lObjC',
@@ -47,6 +49,9 @@ Pod::Spec.new do |s|
   s.dependency 'DZNEmptyDataSet'
   s.dependency 'MMMaterialDesignSpinner'
   s.dependency 'HondaConnectSDK'
+  s.dependency 'Tencent-MapSDK'
+  s.dependency 'FMDB'
+  s.dependency 'lottie-ios', '2.5.3'
 
 
 end

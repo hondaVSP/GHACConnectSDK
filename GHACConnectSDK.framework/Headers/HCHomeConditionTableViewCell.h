@@ -7,17 +7,22 @@
 //
 
 #import <HondaConnectSDK/HCTableViewCell.h>
+@class HCVehicleStateModel, HCHomeFunctionConfigModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HCHomeConditionTableViewCellData : NSObject
+
 @property (nonatomic, assign) NSInteger action;
-@property (nonatomic, copy) NSString *msg;
+@property (nonatomic, strong) HCVehicleStateModel *vehicleState;
+@property (nonatomic, strong) HCHomeFunctionConfigModel *config;
+@property (nonatomic, assign) NSInteger authType;
+
 @end
 
 @interface HCHomeConditionTableViewCell : HCTableViewCell
 
-+ (NICellObject *)createWithAction:(NSInteger)action withMsg:(NSString *)msg;
++ (NICellObject *)cellWithAction:(NSInteger)action vehicleState:(HCVehicleStateModel *)state config:(HCHomeFunctionConfigModel *)config authType:(NSInteger)authType;
 
 @end
 

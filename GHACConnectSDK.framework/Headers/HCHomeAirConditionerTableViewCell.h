@@ -11,13 +11,17 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HCHomeAirConditionerTableViewCellData : NSObject
+
 @property (nonatomic, assign) NSInteger action;
-@property (nonatomic, copy) NSString *msg;
+@property (nonatomic, assign) NSInteger on;
+@property (nonatomic, assign) NSInteger authType;
+
 @end
+
 
 @interface HCHomeAirConditionerTableViewCell : HCTableViewCell
 
-+ (NICellObject *)createWithAction:(NSInteger)action withMsg:(NSString *)msg;
++ (NICellObject *)cellWithAction:(NSInteger)action authType:(NSInteger)authType on:(NSInteger)on;
 
 @end
 

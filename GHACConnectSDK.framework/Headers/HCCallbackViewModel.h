@@ -6,13 +6,14 @@
 //  Copyright © 2021 445878662@qq.com. All rights reserved.
 //
 
-#import "HCViewModel.h"
+#import <HondaConnectSDK/HCViewModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HCCallbackViewModel : HCViewModel
 
 @property (nonatomic, copy) void (^callbackBlock)(id value);
+@property (nonatomic, copy) NSString *vinCode;
 
 @end
 

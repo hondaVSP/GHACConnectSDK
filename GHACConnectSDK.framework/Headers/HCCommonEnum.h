@@ -106,6 +106,13 @@ typedef NS_ENUM(NSUInteger, HCAuthStatus) {
 };
 
 
+#pragma mark - POI信息展示类型
+typedef NS_ENUM(NSInteger, HCPOIInfoDisplayType) {
+    HCPOIInfoDisplayType_SendToCar,           // 发送至车
+    HCPOIInfoDisplayType_SetDestination,      // 设置目的地
+    HCPOIInfoDisplayType_SetFenceCenter,      // 设为中心点 (围栏功能)
+};
+
 @end
 
 NS_ASSUME_NONNULL_END
