@@ -98,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param errorBlock 异常错误信息回调
  */
 - (void)jumpBindVehicle:(UIViewController *)controller
-         successBlock:(void(^)(NSDictionary *successDictionary))successBlock
+         successBlock:(void(^)(GHACConnectVehicleModel *model))successBlock
             onFailure:(void (^)(NSDictionary *failureDictionary))failureBlock
               onError:(void (^)(NSDictionary *errorDictionary))errorBlock;
 
