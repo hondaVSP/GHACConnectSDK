@@ -42,6 +42,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) UIViewController *loadHomeController;
 
 /**
+ * 跳转扫码页的Controller
+ */
+@property (nonatomic, strong, readonly) UIViewController *loadScanQRController;
+
+/**
  * 获取车辆列表
  *
  * @param successBlock 成功结果回调---返回车辆列表List
