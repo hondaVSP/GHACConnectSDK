@@ -108,6 +108,12 @@ NS_ASSUME_NONNULL_BEGIN
               onError:(void (^)(NSDictionary *errorDictionary))errorBlock;
 
 
+/**
+ * 导航选择器
+ * @param lastOneMile 导航数据(json格式字符串)
+ */
+- (void)showMapChoose:(NSString *)lastOneMile;
+
 @end
 
 NS_ASSUME_NONNULL_END

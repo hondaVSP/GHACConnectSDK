@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GHACConnectSDK'
-  s.version = '0.1.3'
+  s.version = '0.1.6'
   s.summary          = 'GHACConnectSDK'
 
 # This description is used to generate tags and improve search results.
@@ -51,6 +51,7 @@ Pod::Spec.new do |s|
   s.dependency 'Tencent-MapSDK'
   s.dependency 'FMDB'
   s.dependency 'lottie-ios','2.5.3'
+  s.dependency 'CocoaAsyncSocket'
 
 
 
