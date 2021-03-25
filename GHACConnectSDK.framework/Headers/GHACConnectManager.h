@@ -57,55 +57,43 @@ NS_ASSUME_NONNULL_BEGIN
          onFailure:(void (^)(NSDictionary *failureDictionary))failureBlock
            onError:(void (^)(NSDictionary *errorDictionary))errorBlock;
 
-/**
- * 设置默认车辆
- *
- * @param vehicleId 人车关系ID
- * @param successBlock 成功结果回调---返回车辆信息模型
- * @param failureBlock 业务错误信息回调
- * @param errorBlock 异常错误信息回调
- *
- */
-- (void)setDefaultVehicle:(NSString *)vehicleId
-     successBlock:(void(^)(GHACConnectVehicleModel *vehicleInfo))successBlock
-        onFailure:(void (^)(NSDictionary *failureDictionary))failureBlock
-          onError:(void (^)(NSDictionary *errorDictionary))errorBlock;
-
 
 /**
  * 启动车辆状态页
  *
- * @param model 车辆信息模型
+ * @param vinCode 车辆VIN
  * @param controller 当前页面controller 用于页面加载
  * @param successBlock 成功结果回调
  * @param failureBlock 业务错误信息回调
  * @param errorBlock 异常错误信息回调
  */
-- (void)loadVehiclePageWithModel:(GHACConnectVehicleModel *)model
-                   controller:(UIViewController *)controller
-                 successBlock:(void(^)(NSDictionary *successDictionary))successBlock
-                    onFailure:(void (^)(NSDictionary *failureDictionary))failureBlock
-                      onError:(void (^)(NSDictionary *errorDictionary))errorBlock;
+- (void)loadVehiclePageWithVinCode:(NSString *)vinCode
+                        controller:(UIViewController *)controller
+                      successBlock:(void(^)(NSDictionary *successDictionary))successBlock
+                         onFailure:(void (^)(NSDictionary *failureDictionary))failureBlock
+                           onError:(void (^)(NSDictionary *errorDictionary))errorBlock;
 
 /**
  * 刷新车辆状态页
- * @param model 车辆信息模型
+ * @param vinCode 车辆VIN
  */
-- (void)refreshVehiclePage:(GHACConnectVehicleModel *)model;
+- (void)refreshVehiclePage:(NSString *)vinCode;
 
 
 /**
  * 跳转绑定车辆
  *
+ * @param vinCode 车辆VIN
  * @param controller 当前页面controller 用于页面跳转
  * @param successBlock 成功结果回调
  * @param failureBlock 业务错误信息回调
  * @param errorBlock 异常错误信息回调
  */
-- (void)jumpBindVehicle:(UIViewController *)controller
-         successBlock:(void(^)(GHACConnectVehicleModel *model))successBlock
-            onFailure:(void (^)(NSDictionary *failureDictionary))failureBlock
-              onError:(void (^)(NSDictionary *errorDictionary))errorBlock;
+- (void)jumpBindVehicle:(NSString *)vinCode
+             controller:(UIViewController *)controller
+           successBlock:(void(^)(GHACConnectVehicleModel *model))successBlock
+              onFailure:(void (^)(NSDictionary *failureDictionary))failureBlock
+                onError:(void (^)(NSDictionary *errorDictionary))errorBlock;
 
 
 /**
