@@ -8,6 +8,12 @@
 #import <Foundation/Foundation.h>
 #import "GHACConnectModel.h"
 
+//环境枚举
+typedef NS_ENUM(NSUInteger, HCEnvironmentType) {
+    HCEnvironmentTypeFormal,    //正式环境
+    HCEnvironmentTypeSystem,    //系统环境
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol GHACConnectManagerDelegate <NSObject>
@@ -25,6 +31,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<GHACConnectManagerDelegate> delegate;
 
 + (instancetype)sharedInstance;
+
+/**
+ * 设置环境
+ */
+@property (nonatomic, assign) HCEnvironmentType environment;
 
 /**
  * 设置GHAC Token
