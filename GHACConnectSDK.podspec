@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GHACConnectSDK'
-  s.version = '1.2.5'
+  s.version = '1.2.6'
   s.summary          = 'GHACConnectSDK'
 
 # This description is used to generate tags and improve search results.
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   s.dependency 'AFNetworking/NSURLSession'
   s.dependency 'Masonry'
   s.dependency 'KVOController'
-  s.dependency 'FDFullscreenPopGesture'
+  s.dependency 'HCFullscreenPopGesture'
   s.dependency 'IQKeyboardManager'
   s.dependency 'Nimbus/Models'
   s.dependency 'MJRefresh'
