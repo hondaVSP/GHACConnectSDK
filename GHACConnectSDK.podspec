@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GHACConnectSDK'
-  s.version = '1.2.6'
+  s.version = '1.2.8'
   s.summary          = 'GHACConnectSDK'
 
 # This description is used to generate tags and improve search results.

@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *modelImgUrl;
 /**城市编码*/
 @property (nonatomic, copy) NSString *cityCode;
+@property (nonatomic, copy) NSString *userId;
 
 
 @end
