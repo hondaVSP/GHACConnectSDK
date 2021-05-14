@@ -63,10 +63,14 @@ NS_ASSUME_NONNULL_BEGIN
  * @param successBlock 成功结果回调---返回车辆列表List
  * @param failureBlock 业务错误信息回调
  * @param errorBlock 异常错误信息回调
+ * @param Identity 是否车主
+ * @param vinCode 车辆vinCode
  */
-- (void)getVehicleList:(void(^)(NSArray <GHACConnectVehicleModel *> *vehicleList))successBlock
-         onFailure:(void (^)(NSDictionary *failureDictionary))failureBlock
-           onError:(void (^)(NSDictionary *errorDictionary))errorBlock;
+- (void)getVehicleList:(NSString *)Identity
+               vinCode:(NSString *)vinCode
+             onSuccess:(void(^)(NSArray <GHACConnectVehicleModel *> *vehicleList))successBlock
+             onFailure:(void (^)(NSDictionary *failureDictionary))failureBlock
+               onError:(void (^)(NSDictionary *errorDictionary))errorBlock;
 
 
 /**
