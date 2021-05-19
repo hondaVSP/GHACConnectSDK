@@ -117,6 +117,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)showMapChoose:(NSString *)lastOneMile;
 
+/**
+ * SDK断开连接
+ */
+- (void)tokenExpireLogOut;
+
 @end
 
 NS_ASSUME_NONNULL_END
