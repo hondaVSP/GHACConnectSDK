@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
+@property (nonatomic, strong, readonly) NSMutableDictionary *cacheDict;
 /**
  * 设置环境
  */
@@ -121,6 +122,14 @@ NS_ASSUME_NONNULL_BEGIN
  * SDK断开连接
  */
 - (void)tokenExpireLogOut;
+
+/**
+ * 注册app Scheme 以及universalLink 用于微信、支付宝支付
+ * @param scheme <#scheme description#>
+ * @param universalLink <#universalLink description#>
+ */
+- (void)registerAppScheme:(NSString *)scheme universalLink:(NSString *)universalLink;
+
 
 @end
 
