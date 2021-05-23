@@ -124,6 +124,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)tokenExpireLogOut;
 
 /**
+ * 导航选择器
+ * @param lastOneMile 导航数据(json格式字符串)
+ */
+
+
+/**
  * 注册app Scheme 以及universalLink 用于微信、支付宝支付
  * @param scheme <#scheme description#>
  * @param universalLink <#universalLink description#>
