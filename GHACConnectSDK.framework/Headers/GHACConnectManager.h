@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import "GHACConnectModel.h"
-
 //环境枚举
 typedef NS_ENUM(NSUInteger, HCEnvironmentType) {
     HCEnvironmentTypeFormal,    //正式环境
@@ -111,6 +110,13 @@ NS_ASSUME_NONNULL_BEGIN
               onFailure:(void (^)(NSDictionary *failureDictionary))failureBlock
                 onError:(void (^)(NSDictionary *errorDictionary))errorBlock;
 
+/// 扫码识别
+/// @param controller 当前页面controller 用于页面跳转
+/// @param vinCode 车架号
+/// @param secretInfo 二维码内容
+
+- (void)scanCodeRecognizationWithController:(UIViewController *)controller vinCode:(NSString *)vinCode productSn:(NSString *)productSn secretInfo:(NSString *)secretInfo;
+
 
 /**
  * 导航选择器
@@ -135,6 +141,29 @@ NS_ASSUME_NONNULL_BEGIN
  * @param universalLink <#universalLink description#>
  */
 - (void)registerAppScheme:(NSString *)scheme universalLink:(NSString *)universalLink;
+
+
+/**
+ * 车辆增值服务微信支付结果回调
+ * @param resp 微信支付结果
+ */
+- (void)payWXResultCallback:(id)resp;
+
+
+/**
+ * 车辆增值服务支付宝支付结果回调
+ * @param resp 支付宝支付结果
+ */
+- (void)payAliResultCallback:(NSURL *)resultUrl;
+
+
+/**
+ * 商城购买入口
+ * @param productType 商品类型（1.流量管理 2.增值服务）
+ * @param productSn 商品编号（增值服务）
+ */
+- (void)showDialogGoods:(NSString *)productType productSn:(NSString *)productSn controller:(UIViewController *)controller;
+
 
 
 @end
