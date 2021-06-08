@@ -115,7 +115,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param vinCode 车架号
 /// @param secretInfo 二维码内容
 
-- (void)scanCodeRecognizationWithController:(UIViewController *)controller vinCode:(NSString *)vinCode productSn:(NSString *)productSn secretInfo:(NSString *)secretInfo;
+- (void)scanCodeRecognizationWithController:(UIViewController *)controller
+                                    vinCode:(NSString *)vinCode
+                                 secretInfo:(NSString *)secretInfo;
 
 
 /**
@@ -162,7 +164,10 @@ NS_ASSUME_NONNULL_BEGIN
  * @param productType 商品类型（1.流量管理 2.增值服务）
  * @param productSn 商品编号（增值服务）
  */
-- (void)showDialogGoods:(NSString *)productType productSn:(NSString *)productSn controller:(UIViewController *)controller;
+- (void)showDialogGoods:(NSString *)productType
+              productSn:(NSString *)productSn
+             controller:(UIViewController *)controller
+           successBlock:(void(^)())successBlock;
 
 
 
