@@ -172,12 +172,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * 订单详情入口
- * @param productType 商品类型（1.流量管理 2.增值服务）
- * @param productSn 商品编号（增值服务）
+ * @param orderType 订单类型（1.流量管理 2.增值服务）
+ * @param orderSn 订单编号（增值服务）
+ * @param vinCode 车辆VIN （流量管理）
  */
-- (void)showDialogOrderDetail:(NSString *)productType
-                    productSn:(NSString *)productSn
-                    vinCode:(NSString *)vinCode
+- (void)showDialogOrderDetail:(NSString *)orderType
+                      orderSn:(NSString *)orderSn
+                      vinCode:(NSString *)vinCode
                    controller:(UIViewController *)controller
                  successBlock:(void(^)())successBlock;
 
