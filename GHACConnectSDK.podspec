@@ -27,7 +27,8 @@ Pod::Spec.new do |s|
   # s.frameworks = 'Foundaxtion','UIKit','CoreLocation','Security','CoreTelephony','SystemConfiguration','JavaScriptCore','WebKit'
   s.static_framework = true
   s.resource = 'GHACConnectSDK.bundle'
-  
+  s.swift_version = '5.0'
+
   s.pod_target_xcconfig = {
     'OTHER_LDFLAGS' => '-lObjC',
     'VALID_ARCHS' => 'x86_64 armv7 arm64'
