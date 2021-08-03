@@ -45,7 +45,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 当前车辆
  */
-@property (nonatomic, strong, readonly) GHACConnectVehicleModel *vehicleModel;
+@property (nonatomic, strong, readwrite) GHACConnectVehicleModel *vehicleModel;
+
+/**
+ * 当前车辆车型配置
+ */
+@property (nonatomic, strong, readonly) id vehicleConfigModel;
 
 /**
  * 启动首页的Controller
