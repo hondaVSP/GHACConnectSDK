@@ -53,6 +53,7 @@ Pod::Spec.new do |s|
   s.dependency 'lottie-ios','2.5.3'
   s.dependency 'CocoaAsyncSocket'
   s.dependency 'HCPayModule'
+  s.dependency 'Charts'
 
 
 
