@@ -49,7 +49,7 @@ Pod::Spec.new do |s|
   s.dependency 'DZNEmptyDataSet'
   s.dependency 'MMMaterialDesignSpinner'
   s.dependency 'HondaConnectSDK'
-  s.dependency 'Tencent-MapSDK'
+  s.dependency 'Tencent-MapSDK','4.4.1.1'
   s.dependency 'FMDB'
   s.dependency 'lottie-ios','2.5.3'
   s.dependency 'CocoaAsyncSocket'
