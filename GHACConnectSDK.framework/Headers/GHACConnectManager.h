@@ -23,6 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)tokenInvaild;
 
+/**
+ * 授权登录代理
+ */
+- (void)getUserIdAndToken:(void(^)(NSString *userID,NSString *token))successBlock;
+
 @end
 
 @interface GHACConnectManager : NSObject
@@ -185,6 +190,25 @@ NS_ASSUME_NONNULL_BEGIN
                       vinCode:(NSString *)vinCode
                    controller:(UIViewController *)controller
                  successBlock:(void(^)())successBlock;
+
+/**
+ * 授权登录
+ * @param url schemeUrl
+ * @param controller 控制器
+ * @param successBlock 成功回调
+ */
+- (void)authLogin:(NSURL *)url
+       controller:(UIViewController *)controller
+      resultBlock:(void(^)(BOOL result))resultBlock;
+
+/**
+ * 添加钥匙
+ * @param url schemeUrl
+ * @param controller 控制器
+ * @param successBlock 成功回调
+ */
+- (void)addKey:(NSURL *)url
+   resultBlock:(void(^)(BOOL result))resultBlock;
 
 
 @end
