@@ -198,7 +198,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param successBlock 成功回调
  */
 - (void)authLogin:(NSURL *)url
-       controller:(UIViewController *)controller
+       controller:(UINavigationController *)controller
       resultBlock:(void(^)(BOOL result))resultBlock;
 
 /**
