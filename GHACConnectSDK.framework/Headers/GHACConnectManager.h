@@ -211,6 +211,13 @@ NS_ASSUME_NONNULL_BEGIN
    resultBlock:(void(^)(BOOL result))resultBlock;
 
 
+/**
+ * 获取广本Id和广本Token
+ * @param successBlock 成功回调
+ */
+- (void)getGHACIdAndToken:(void(^)(NSString *userID,NSString *token))resultBlock;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
