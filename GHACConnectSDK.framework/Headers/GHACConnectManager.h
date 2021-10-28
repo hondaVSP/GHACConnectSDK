@@ -208,6 +208,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param successBlock 成功回调
  */
 - (void)addKey:(NSURL *)url
+    controller:(UIViewController *)controller
    resultBlock:(void(^)(BOOL result))resultBlock;
 
 
