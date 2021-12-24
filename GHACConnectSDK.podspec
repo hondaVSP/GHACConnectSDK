@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GHACConnectSDK'
-  s.version = '1.7.0.10'
+  s.version = '1.7.0.1-hotfix'
   s.summary          = 'GHACConnectSDK'
 
 # This description is used to generate tags and improve search results.
@@ -45,10 +45,10 @@ Pod::Spec.new do |s|
   s.dependency 'HCFullscreenPopGesture'
   s.dependency 'IQKeyboardManager'
   s.dependency 'Nimbus/Models'
-  s.dependency 'MJRefresh'
+  s.dependency 'MJRefresh','3.7.2'
   s.dependency 'DZNEmptyDataSet'
   s.dependency 'MMMaterialDesignSpinner'
-  s.dependency 'HondaConnectSDK'
+  s.dependency 'HondaConnectSDK','0.1.31'
   s.dependency 'Tencent-MapSDK','4.4.1.1'
   s.dependency 'FMDB'
   s.dependency 'lottie-ios','2.5.3'
@@ -56,7 +56,6 @@ Pod::Spec.new do |s|
   s.dependency 'HCPayModule'
   s.dependency 'Charts'
   s.dependency 'VSPScanCodeChargingModule'
-  s.dependency 'HCLogModule'
 
 
 
